@@ -1,4 +1,5 @@
 RoomReservations::Application.routes.draw do
+  devise_for :teams
   root 'reservations#index'
 
   resources :reservations
