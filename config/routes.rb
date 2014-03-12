@@ -4,7 +4,7 @@ RoomReservations::Application.routes.draw do
 
   resources :reservations
 
-  resources :teams
+  resources :teams, only: [:index, :show]
 
   resources :rooms
 

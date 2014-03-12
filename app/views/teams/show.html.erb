@@ -5,5 +5,9 @@
   <%= @team.name %>
 </p>
 
-<%= link_to 'Edit', edit_team_path(@team) %> |
+<p>
+  <strong>Email:</strong>
+  <%= @team.email %>
+</p>
+
 <%= link_to 'Back', teams_path %>
