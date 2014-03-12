@@ -16,8 +16,8 @@
   <tbody>
     <% @reservations.each do |reservation| %>
       <tr>
-        <td><%= reservation.room.name %></td>
-        <td><%= reservation.team.name %></td>
+        <td><%= link_to reservation.room.name, reservation.room %></td>
+        <td><%= link_to reservation.team.name, reservation.team %></td>
         <td><%= reservation.from.to_s(:short) %></td>
         <td><%= reservation.until.to_s(:short) %></td>
         <td><%= link_to 'Show', reservation %></td>
