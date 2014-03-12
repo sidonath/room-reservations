@@ -1,4 +1,6 @@
 RoomReservations::Application.routes.draw do
+  resources :reservations
+
   resources :teams
 
   resources :rooms

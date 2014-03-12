@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  room_id: 
+  team_id: 
+  from: 2014-03-12 01:13:54
+  until: 2014-03-12 01:13:54
+
+two:
+  room_id: 
+  team_id: 
+  from: 2014-03-12 01:13:54
+  until: 2014-03-12 01:13:54
