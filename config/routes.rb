@@ -1,4 +1,6 @@
 RoomReservations::Application.routes.draw do
+  root 'reservations#index'
+
   resources :reservations
 
   resources :teams
