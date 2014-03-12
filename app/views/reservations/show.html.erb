@@ -12,12 +12,12 @@
 
 <p>
   <strong>From:</strong>
-  <%= @reservation.from %>
+  <%= @reservation.from.to_s(:short) %>
 </p>
 
 <p>
   <strong>Until:</strong>
-  <%= @reservation.until %>
+  <%= @reservation.until.to_s(:short) %>
 </p>
 
 <%= link_to 'Edit', edit_reservation_path(@reservation) %> |
