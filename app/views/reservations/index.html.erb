@@ -19,11 +19,13 @@
         <td><%= reservation.from.to_s(:short) %></td>
         <td><%= reservation.until.to_s(:short) %></td>
         <td>
-          <%= link_to 'Show', reservation %>
-          <% if reservation.team == current_team %>
-            <%= link_to 'Edit', edit_reservation_path(reservation) %>
-            <%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %>
-          <% end %>
+          <div class="btn-group">
+            <%= link_to 'Show', reservation, class: "btn btn-primary" %>
+            <% if reservation.team == current_team %>
+              <%= link_to 'Edit', edit_reservation_path(reservation), class: "btn btn-default" %>
+              <%= link_to 'Destroy', reservation, method: :delete, class: "btn btn-danger", data: { confirm: 'Are you sure?' } %>
+            <% end %>
+          </div>
         </td>
       </tr>
     <% end %>
