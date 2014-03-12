@@ -8,8 +8,6 @@
       <th>From</th>
       <th>Until</th>
       <th></th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
 
@@ -20,9 +18,13 @@
         <td><%= link_to reservation.team.name, reservation.team %></td>
         <td><%= reservation.from.to_s(:short) %></td>
         <td><%= reservation.until.to_s(:short) %></td>
-        <td><%= link_to 'Show', reservation %></td>
-        <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
-        <td><%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to 'Show', reservation %>
+          <% if reservation.team == current_team %>
+            <%= link_to 'Edit', edit_reservation_path(reservation) %>
+            <%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>

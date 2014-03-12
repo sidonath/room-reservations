@@ -20,5 +20,7 @@
   <%= @reservation.until.to_s(:short) %>
 </p>
 
-<%= link_to 'Edit', edit_reservation_path(@reservation) %> |
+<% if @reservation.team == current_team %>
+  <%= link_to 'Edit', edit_reservation_path(@reservation) %> |
+<% end %>
 <%= link_to 'Back', reservations_path %>

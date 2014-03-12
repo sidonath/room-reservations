@@ -1,5 +1,6 @@
 class ReservationsController < ApplicationController
-  before_action :set_reservation, only: [:show, :edit, :update, :destroy]
+  before_action :set_reservation, only: [:show]
+  before_action :set_reservation_for_modification, only: [:edit, :update, :destroy]
 
   # GET /reservations
   # GET /reservations.json
@@ -65,6 +66,10 @@ class ReservationsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_reservation
       @reservation = Reservation.find(params[:id])
+    end
+
+    def set_reservation_for_modification
+      @reservation = current_team.reservations.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
