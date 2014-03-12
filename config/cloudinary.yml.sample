@@ -1,0 +1,21 @@
+# Get your own cloudinary.yml file from Cloudinary:
+# https://cloudinary.com/
+---
+development:
+  cloud_name: sample
+  api_key: 'sample'
+  api_secret: sample
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: sample
+  api_key: 'sample'
+  api_secret: sample
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: sample
+  api_key: 'sample'
+  api_secret: sample
+  enhance_image_tag: true
+  static_image_support: false

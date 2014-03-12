@@ -10,6 +10,14 @@
   <%= @room.description %>
 </p>
 
+<% if @room.photo %>
+<p>
+  <%= link_to @room.photo.url do %>
+    <%= cl_image_tag(@room.photo, width: 200, height: 200, crop: :fit) %>
+  <% end %>
+</p>
+<% end %>
+
 <h2>Reservations</h2>
 
 <table>
