@@ -34,6 +34,21 @@
           <%= link_to "Teams", teams_path %>
         </li>
       </ul>
+
+      <% if team_signed_in? %>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <p class="navbar-text">
+            <%= current_team.name %>
+          </p>
+        </li>
+        <li>
+          <%= form_tag destroy_team_session_path, method: :delete, class: 'navbar-form navbar-right' do %>
+            <%= button_tag "Sign out", class: 'btn btn-default' %>
+          <% end %>
+        </li>
+      </ul>
+      <% end %>
     </div>
   </div>
 </nav>
